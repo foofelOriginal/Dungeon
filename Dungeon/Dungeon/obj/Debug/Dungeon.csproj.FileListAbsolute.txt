@@ -1,0 +1,7 @@
+E:\VisualStudioSolutions\Dungeon\Dungeon\bin\Debug\Dungeon.exe.config
+E:\VisualStudioSolutions\Dungeon\Dungeon\bin\Debug\Dungeon.exe
+E:\VisualStudioSolutions\Dungeon\Dungeon\bin\Debug\Dungeon.pdb
+E:\VisualStudioSolutions\Dungeon\Dungeon\obj\Debug\Dungeon.csproj.CoreCompileInputs.cache
+E:\VisualStudioSolutions\Dungeon\Dungeon\obj\Debug\Dungeon.exe
+E:\VisualStudioSolutions\Dungeon\Dungeon\obj\Debug\Dungeon.pdb
+E:\VisualStudioSolutions\Dungeon\Dungeon\obj\Debug\Dungeon.csprojAssemblyReference.cache

@@ -145,7 +145,7 @@ namespace Dungeon
 
                                 Console.WriteLine("Player does a swing!");
 
-                                if (plrHitChance > 0)
+                                if (plrHitChance > 24)
                                 {
                                     enm1.eHealth -= defPlayer.pDamage;
                                     if (enm1.eHealth < 0)
@@ -159,7 +159,7 @@ namespace Dungeon
 
                                 Console.WriteLine(enm1.eName + " does a swing!");
 
-                                if (enmHitChance > 999)
+                                if (enmHitChance > 69)
                                 {
                                     defPlayer.pHealth -= enm1.eDamage;
                                     Console.WriteLine("WHOOP! That attack id " + enm1.eDamage + " damage to the player. :peepoSad:" + "\n");
@@ -235,7 +235,7 @@ namespace Dungeon
                     Random coinGen = new Random();
                     int earnedCoins = coinGen.Next(1, 51);
                     Console.WriteLine(enm1.eName + " has been defeated!");
-                    defPlayer.pDamage = loadPlayer.pDamage;
+                    defPlayer.pDamage = loadPlayer.pDamage;  // cuz opwpn u know
 
                     /* bruh item code xd (idk how to binary serialize lists (smh) thats why its not working)
 
@@ -246,7 +246,7 @@ namespace Dungeon
                     int itemAmount = itemAmountGen.Next(1, 8);
 
                     defPlayer.inventory.Add(items[itemId] + " x" + itemAmount); */
-                    defPlayer.coins += earnedCoins; // cuz opwpn u know
+                    defPlayer.coins += earnedCoins;
                     Console.WriteLine("Coins earned: " + earnedCoins);
                     Console.WriteLine("Current coins: " + defPlayer.coins);
                     SaveData();

@@ -16,6 +16,7 @@ namespace Dungeon
         public int coins { get; set; }
         public int activeItem { get; set; }
         public List<string> inventory = new List<string>();
+        public List<string> weapons = new List<string>();
         public Player(int _pHealth, int _pDamage, int _coins)
         {
             pHealth = _pHealth;
@@ -171,36 +172,53 @@ namespace Dungeon
 
                                 Console.WriteLine("Ur eichpee is " + defPlayer.pHealth);
                             }
-                            else if (command == "123")
+                            else if (command == cheatCode)
                             {
                                 Console.Clear();
 
                                 // Here starts cheat menu
-                                Console.WriteLine("Cheat Menu: (WIP)");
+                                Console.WriteLine("Debug Menu: (WIP)");
                                 Console.WriteLine("Instantly kill current enemy: ik");
                                 Console.WriteLine("Get OP Weapon (lasts only for this fight): opwpn");
-                                Console.WriteLine("Get an enourmous 10k coins: moreCoins");
+                                Console.WriteLine("Get 10k coins: moreCoins");
+                                Console.WriteLine("Crash the game: crash");
 
-                                string cheat = Console.ReadLine();
+                                void crash1 ()
+                                {
+                                    Console.WriteLine("bruh?");
+                                    crash2();
+                                }
 
-                                if (cheat == "ik")
+                                void crash2()
+                                {
+                                    Console.WriteLine("bruh.");
+                                    crash1();
+                                }
+
+                                string debug = Console.ReadLine();
+
+                                if (debug == "ik")
                                 {
                                     Console.Clear();
                                     Console.WriteLine($"{enm1.eName} has die.");
                                     enm1.eHealth -= enm1.eHealth;
                                 }
-                                else if (cheat == "opwpn")
+                                else if (debug == "opwpn")
                                 {
                                     Console.Clear();
                                     defPlayer.pDamage = enm1.eHealth;
                                     Console.WriteLine("Weapon got! type attack");
                                 }
-                                else if (cheat == "moreCoins")
+                                else if (debug == "moreCoins")
                                 {
                                     Console.Clear();
                                     defPlayer.coins += 10000;
                                     Console.WriteLine("Coins given!");
                                     Console.WriteLine("You can continue the fight!");
+                                }
+                                else if (debug == "crash")
+                                {
+                                    crash1();
                                 }
                                 else
                                 {
@@ -210,7 +228,7 @@ namespace Dungeon
                             else if (command != cheatCode)
                             {
                                 Console.WriteLine("Wrong command!!1!");
-                            }
+                            } 
                         }
                         else
                         {
